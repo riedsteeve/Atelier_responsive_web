@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceuil | StudiView - Votre application de recherche</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="bg-[#874CF4] p-6 rounded-lg m-4">
+    <h1 class="text-white text-3xl">Hi, Welcome to </h1>
+    <div class="flex ">
+    <h3 class="font-bold text-white text-2xl">Studiview</h3>
+    <!-- <img src="images/studivew.png" alt="Logo" class="photo"> -->
+    </div>
+    <form>
+      <input type="search" placeholder="Rechercher..." class="p-2 rounded w-full mt-4">
+     <!--- 
+      <button>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      --->
+    </form>
+  </nav>
+
+  <h2 class="italic font-bold text-center mt-8 text-2xl text-[#80359B]">Top research</h2>
+
+  
+  <div>
+    <ul class="form text-white">
+      <li class="bg-[#874CF4] p-2 w-28 h-10 rounded-full text-center">Tous</li>
+      <li class="p-2 w-28 h-10 rounded-full text-center border border-[#874CF4] text-[#874CF4] bg-[#8AC1] cursor-pointer">Formations</li>
+      <li class="p-2 w-28 h-10 rounded-full text-center border border-[#874CF4] text-[#874CF4] bg-[#8AC1] cursor-pointer">Promo</li>
+      <li class="p-2 w-28 h-10 rounded-full text-center border border-[#874CF4] text-[#874CF4] bg-[#8AC1] cursor-pointer">Université</li>
+      <li class="p-2 w-28 h-10 rounded-full text-center border border-[#874CF4] text-[#874CF4] bg-[#8AC1] cursor-pointer">Nouveau</li>
+      <li class="p-2 w-28 h-10 rounded-full text-center border border-[#874CF4] text-[#874CF4] bg-[#8AC1] cursor-pointer">Top profil</li>
+    </ul>
+  </div>
+
+  <div class="p-8 text-[#817CF8]">
+    <h3>123 profils trouvés</h3>
+  </div>
+
+  <div class="p-6">
+    <div id="box" class="w-104 h-25 rounded-lg ">
+      <h2></h2>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  //javascript pour boucler sur le fichier json et afficher les profils
+  fetch('etudiants.json')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('box');
+      container.classList.add();
+      data.forEach(etudiant => {
+        const profile = document.createElement('div');
+        profile.classList.add('w-104', 'bg-[#8AC1]', 'h-25', 'rounded-lg', 'border-2', 'border-[#874CF4]', 'p-2', 'mb-4');
+
+        const name = document.createElement('h2');
+        name.textContent = etudiant.prenom + ' ' + etudiant.nom;
+        name.classList.add('text-[#80359B]', 'font-bold', 'text-lg', 'mt-2');
+        profile.appendChild(name);
+
+        const photo_profil = document.createElement('img');
+        photo_profil.classList.add('w-20', 'h-20', 'bg-[#874CF4]', 'rounded-full');
+        photo_profil.src = etudiant.photo_profil;
+        profile.appendChild(photo_profil);
+
+        
+
+        container.appendChild(profile);
+      });
+    });
+</script>
+</html>
+
