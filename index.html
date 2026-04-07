@@ -7,11 +7,14 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+
 <body>
   <nav class="bg-[#874CF4] p-6 rounded-lg m-4">
     <h1 class="text-white text-3xl">Hi, Welcome to </h1>
-    <div class="flex ">
+    <div class="flex">
     <h3 class="font-bold text-white text-2xl">Studiview</h3>
     </div>
     <form id="search-form">
@@ -19,7 +22,8 @@
     </form>
   </nav>
 
-  <h2 class="italic font-bold text-center mt-8 text-2xl text-[#80359B]">Top research</h2>
+  <h2 class="italic font-bold text-center mt-8 text-2xl text-[#80359B] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 flex justify-center items-center">Top research <hr class="w-64 lg:grid lg:w-full"></h2>
+  
 
   <div>
     <ul class="form text-white">
@@ -42,24 +46,14 @@
     </div>
   </div>
 
+  <script src="data.js"></script>
+  
   <script>
-    const etudiants = [
-      { "id": 1, "nom": "Gauthier", "prenom": "Léa", "photo_profil": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&h=400&fit=crop", "filiere": "Communication Digitale", "ecole": "EFAP" },
-      { "id": 2, "nom": "Masson", "prenom": "Lucas", "photo_profil": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=400&h=400&fit=crop", "filiere": "Ingénierie", "ecole": "INSA Lyon" },
-      { "id": 3, "nom": "Belkacem", "prenom": "Yasmine", "photo_profil": "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=400&h=400&fit=crop", "filiere": "Droit International", "ecole": "Assas" },
-      { "id": 4, "nom": "Rivière", "prenom": "Hugo", "photo_profil": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&h=400&fit=crop", "filiere": "Architecture", "ecole": "ENSA" },
-      { "id": 5, "nom": "Moreau", "prenom": "Chloé", "photo_profil": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&h=400&fit=crop", "filiere": "Médecine", "ecole": "Sorbonne" },
-      { "id": 6, "nom": "Diallo", "prenom": "Amadou", "photo_profil": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=400&fit=crop", "filiere": "Informatique", "ecole": "EPITA" },
-      { "id": 7, "nom": "Petit", "prenom": "Manon", "photo_profil": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&h=400&fit=crop", "filiere": "Design Graphique", "ecole": "LISAA" },
-      { "id": 8, "nom": "Lefebvre", "prenom": "Théo", "photo_profil": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&h=400&fit=crop", "filiere": "Finance", "ecole": "HEC Paris" },
-      { "id": 9, "nom": "Martinez", "prenom": "Sofia", "photo_profil": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=400&h=400&fit=crop", "filiere": "Langues Étrangères", "ecole": "Lyon 2" },
-    ];
 
     const container = document.getElementById('box');
     const countDisplay = document.getElementById('profile-count');
     const searchInput = document.getElementById('search-input');
-
-    
+  
     function afficherProfils(liste) {
       // je vide le container
       container.innerHTML = ''; 
@@ -67,13 +61,15 @@
 
       liste.forEach(etudiant => {
         container.innerHTML += `
-          <div class="bg-[#8AC1]/10 rounded-xl border-2 border-[#874CF4] p-4 flex items-center space-x-4 hover:shadow-lg transition-shadow">
-            <img class="w-20 h-20 rounded-full object-cover border-2 border-white shadow-sm" src="${etudiant.photo_profil}" alt="Photo de ${etudiant.prenom}">
+          <div class="bg-[#8AC1]/10 rounded-xl border-2 border-[#874CF4] p-4 flex items-center space-x-4 hover:shadow-lg transition-shadow cursor-pointer">
+            <img class="w-20 h-20 rounded-full object-cover border-2 border-white shadow-sm" src="${etudiant.photo_profil}" onclick="window.location.href='profil.html?id=${etudiant.id}'" alt="Photo de ${etudiant.prenom}">
             <div class="flex-1">
               <h3 class="text-[#80359B] font-bold text-lg">${etudiant.prenom} ${etudiant.nom}</h3>
               <p class="text-[#874CF4] font-medium text-sm">${etudiant.filiere}</p>
               <p class="text-black-500 text-xs font-bold">${etudiant.ecole}</p>
             </div>
+            <p class="text-[#874CF4] bg-gray-200 text-center p-2 h-8 rounded-full w-20 font-medium text-sm">${etudiant.status}</p>
+             <i class="hidden lg:block fa-regular mt-24 fa-heart text-[#874CF4] text-2xl cursor-pointer" onclick="devientPlein()"></i>
           </div>
         `;
       });
@@ -91,6 +87,12 @@
       );
       afficherProfils(resultats);
     });
+
+    function devientPlein() {
+      const heartIcon = document.querySelector('.fa-heart');
+      heartIcon.classList.toggle('fa-solid');
+      heartIcon.classList.toggle('text-purple-600');
+    }
 
   </script>
 </body>

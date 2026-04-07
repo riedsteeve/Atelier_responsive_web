@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affichage profil | Studiview</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <div class="h-10 rounded-lg m-4 flex justify-between">
+    <div class="flex1 bg-[#874CF4] p-2 text-center w-10 h-10 rounded-full cursor-pointer">
+      <i fa class="fa-solid fa-arrow-left text-white text-sm cursor-pointer" onclick="window.history.back()"></i>
+    </div>
+
+   <div class="w-10 h-10 p-2">
+      <i class="block lg:hidden fa-regular fa-heart text-[#874CF4] text-2xl cursor-pointer" onclick="devientPlein()"></i>
+   </div>
+  </div>
+  
+  <div>
+    <img src="" alt="Photo de profil" class="w-40 h-40 rounded-full block lg:rounded-none mx-auto border-4 border-[#874CF4] shadow-xl profile-photo">
+    <h2 class="text-center text-[#874CF4] text-4xl font-bold m-8 profile-name"></h2>
+  </div>
+
+  <div class="desc lg:block lg:justify-start">
+  <div class="bg-[#F1F1F8] p-4 rounded-lg m-4 md:grid md:grid-cols-1 md:w-2/3 md:m-auto md:text-center" id="desc">
+
+    <h2 class="text-center italic font-bold m-1 text-2xl text-[#874CF4]">Description</h2>
+
+  </div>
+  </div>
+  <h2 class="text-2xl font-bold text-center m-8 text-[#874CF4]">Notice</h2>
+
+  <div class="bg-[#DAC7F2] p-4 rounded-lg m-4 md:w-2/3 md:m-auto text-[#874CF4] italic" id="comm">
+    
+  </div>
+
+  <h2 class="text-2xl font-bold m-8 text-center text-[#874CF4]">Contacts</h2>
+
+  <div class="bg-[#DAC7F2] p-4 rounded-lg m-4 flex md:w-2/3 md:m-auto justify-around" id="cont">
+
+  </div>
+
+
+  <script src="data.js"></script>
+
+  <script>
+    //je recupere les donné de l'étudiant dans l'url
+    const urlParams = new URLSearchParams(window.location.search);
+    const etudiant = {
+      nom: urlParams.get('nom'),
+      prenom: urlParams.get('prenom'),
+      photo: urlParams.get('photo'),
+      filiere: urlParams.get('filiere'),
+      ecole: urlParams.get('ecole')
+    };
+
+    const id = parseInt(urlParams.get('id'));
+    const etudiantData = etudiants.find(e => e.id === id); 
+
+    if(etudiantData){
+      document.querySelectorAll('.profile-name').forEach(el => {
+        el.textContent = `${etudiantData.prenom} ${etudiantData.nom}`;
+      });
+      document.querySelectorAll('.profile-photo').forEach(el => {
+        el.src = etudiantData.photo_profil;
+      });
+
+      const descdiv = document.getElementById('desc');
+      descdiv.innerHTML += `
+        <p class="text-[#874CF4] m-4"><strong>Filière :</strong> ${etudiantData.status}</p>
+        <p class="text-[#874CF4] m-4"><strong>École :</strong> ${etudiantData.filiere}</p>
+        <p class="text-[#874CF4] m-4"><strong>Promotion :</strong> ${etudiantData.promotion}</p>
+        <p class="text-[#874CF4] m-4"><strong>Ecole :</strong> ${etudiantData.ecole}</p>
+      `;
+
+      const comm = document.getElementById('comm');
+      comm.innerHTML += `
+        <p class="text-[#874CF4] text-center m-4">"${etudiantData.commentaire}"</p>
+      `;
+
+      const contacts = document.getElementById('cont');
+      contacts.innerHTML += `
+        <i class="fa-brands fa-linkedin text-blue-500 text-4xl cursor-pointer m-4" href="${etudiantData.linkedin}" title="WhatsApp"></i>
+        <i class="fa-brands fa-instagram text-pink-500 text-4xl cursor-pointer m-4" href="${etudiantData.instagram}" title="LinkedIn"></i>
+        <i class="fa-brands fa-whatsapp text-green-500 text-4xl cursor-pointer m-4" href="${etudiantData.whatsapp}" title="WhatsApp"></i>
+      `;
+    }
+
+
+    function devientPlein() {
+      const heartIcon = document.querySelector('.fa-heart');
+      heartIcon.classList.toggle('fa-solid');
+      heartIcon.classList.toggle('text-purple-600');
+    }
+
+  </script>
+</body>
+</html>
