@@ -8,7 +8,9 @@
 }
 
 body {
-  font-family: 'poppins', sans-serif;}
+  font-family: 'poppins', sans-serif;
+  background-image: url(images/violet.jpg);
+}
 
 .photo {
   width: 100px;
@@ -27,7 +29,14 @@ body {
 }
 
 
-/*Version tablette*/
-.desc{
+/*Version desktop*/
+@media (min-width: 1024px) {
+  .desc{
+
 
 }
+}
+
+
+
+

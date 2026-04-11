@@ -11,7 +11,8 @@ const etudiants = [
     "commentaire": "Une ambiance incroyable et des intervenants très pros. Je recommande vivement !",
     "whatsapp": "https://wa.me/33611223301",
     "linkedin": "https://www.linkedin.com/in/lea-gauthier-com",
-    "instagram": "https://www.instagram.com/lea_gth"
+    "instagram": "https://www.instagram.com/lea_gth",
+    "adresse": "12 Rue de la République, 75001 Paris"
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@ const etudiants = [
     "commentaire": "Grâce à la formation, j'ai trouvé mon premier job en moins de deux mois. Le réseau alumni est top.",
     "whatsapp": "https://wa.me/33611223302",
     "linkedin": "https://www.linkedin.com/in/lucas-masson-ing",
-    "instagram": "https://www.instagram.com/lucas_m_dev"
+    "instagram": "https://www.instagram.com/lucas_m_dev",
+    "adresse": "45 Avenue Jean Jaurès, 69007 Lyon"
   },
   {
     "id": 3,
@@ -39,7 +41,8 @@ const etudiants = [
     "commentaire": "Le campus est moderne et très bien situé. Les cours de droit sont passionnants.",
     "whatsapp": "https://wa.me/33611223303",
     "linkedin": "https://www.linkedin.com/in/yasmine-b-law",
-    "instagram": "https://www.instagram.com/yas_lawyer"
+    "instagram": "https://www.instagram.com/yas_lawyer",
+    "adresse": "8 Place de la Comédie, 34000 Montpellier"
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@ const etudiants = [
     "commentaire": "Les projets de groupe m'ont appris à travailler en équipe comme en agence. Un vrai plus.",
     "whatsapp": "https://wa.me/33611223304",
     "linkedin": "https://www.linkedin.com/in/hugo-riviere-archi",
-    "instagram": "https://www.instagram.com/hugo_builds"
+    "instagram": "https://www.instagram.com/hugo_builds",
+    "adresse": "22 Rue du Vieux Port, 13002 Marseille"
   },
   {
     "id": 5,
@@ -67,7 +71,8 @@ const etudiants = [
     "commentaire": "Les équipements de simulation sont de dernière génération, c'est idéal pour s'exercer.",
     "whatsapp": "https://wa.me/33611223305",
     "linkedin": "https://www.linkedin.com/in/chloe-moreau-med",
-    "instagram": "https://www.instagram.com/chloe_doc"
+    "instagram": "https://www.instagram.com/chloe_doc",
+    "adresse": "15 Boulevard de la Liberté, 59000 Lille"
   },
   {
     "id": 6,
@@ -81,7 +86,8 @@ const etudiants = [
     "commentaire": "On a accès à beaucoup de ressources en ligne et le tutorat entre étudiants aide vraiment.",
     "whatsapp": "https://wa.me/33611223306",
     "linkedin": "https://www.linkedin.com/in/amadou-diallo-it",
-    "instagram": "https://www.instagram.com/amadou_code"
+    "instagram": "https://www.instagram.com/amadou_code",
+    "adresse": "30 Quai des Chartrons, 33000 Bordeaux"
   },
   {
     "id": 7,
@@ -95,7 +101,8 @@ const etudiants = [
     "commentaire": "La liberté créative que l'on nous laisse est exceptionnelle. J'ai pu développer mon propre style.",
     "whatsapp": "https://wa.me/33611223307",
     "linkedin": "https://www.linkedin.com/in/manon-petit-design",
-    "instagram": "https://www.instagram.com/manon_pixels"
+    "instagram": "https://www.instagram.com/manon_pixels",
+    "adresse": "5 Rue Crébillon, 44000 Nantes"
   },
   {
     "id": 8,
@@ -109,7 +116,8 @@ const etudiants = [
     "commentaire": "Le rythme est soutenu mais l'entraide entre élèves permet de ne jamais lâcher.",
     "whatsapp": "https://wa.me/33611223308",
     "linkedin": "https://www.linkedin.com/in/theo-lefebvre-fin",
-    "instagram": "https://www.instagram.com/theo_finance"
+    "instagram": "https://www.instagram.com/theo_finance",
+    "adresse": "12 Avenue de l'Europe, 67000 Strasbourg"
   },
   {
     "id": 9,
@@ -123,7 +131,8 @@ const etudiants = [
     "commentaire": "Les échanges internationaux proposés sont un vrai tremplin pour la suite de la carrière.",
     "whatsapp": "https://wa.me/33611223309",
     "linkedin": "https://www.linkedin.com/in/sofia-martinez-trad",
-    "instagram": "https://www.instagram.com/sofia_polyglot"
+    "instagram": "https://www.instagram.com/sofia_polyglot",
+    "adresse": "10 Rue du Palais de Justice, 06300 Nice"
   },
   {
     "id": 10,
@@ -137,7 +146,8 @@ const etudiants = [
     "commentaire": "L'école permet de concilier parfaitement le sport de haut niveau et les études.",
     "whatsapp": "https://wa.me/33611223310",
     "linkedin": "https://www.linkedin.com/in/enzo-andre-sport",
-    "instagram": "https://www.instagram.com/enzo_coach"
+    "instagram": "https://www.instagram.com/enzo_coach",
+    "adresse": "18 Rue Saint-Hélier, 35000 Rennes"
   },
   {
     "id": 11,
@@ -151,7 +161,8 @@ const etudiants = [
     "commentaire": "Des profs passionnés qui viennent de l'industrie. C'est du concret dès le premier jour.",
     "whatsapp": "https://wa.me/33611223311",
     "linkedin": "https://www.linkedin.com/in/bastien-lemoine-game",
-    "instagram": "https://www.instagram.com/bast_gaming"
+    "instagram": "https://www.instagram.com/bast_gaming",
+    "adresse": "55 Boulevard Haussmann, 75009 Paris"
   },
   {
     "id": 12,
@@ -165,7 +176,8 @@ const etudiants = [
     "commentaire": "La mise à disposition d'un studio radio et télé est géniale pour nos exercices pratiques.",
     "whatsapp": "https://wa.me/33611223312",
     "linkedin": "https://www.linkedin.com/in/manon-rousseau-press",
-    "instagram": "https://www.instagram.com/manon_reporter"
+    "instagram": "https://www.instagram.com/manon_reporter",
+    "adresse": "14 Avenue de la Libération, 63000 Clermont-Ferrand"
   },
   {
     "id": 13,
@@ -179,7 +191,8 @@ const etudiants = [
     "commentaire": "On travaille sur des vrais cas d'entreprises, c'est très motivant et formateur.",
     "whatsapp": "https://wa.me/33611223313",
     "linkedin": "https://www.linkedin.com/in/nathan-girard-ai",
-    "instagram": "https://www.instagram.com/nathan_dev"
+    "instagram": "https://www.instagram.com/nathan_dev",
+    "adresse": "2 Rue de l'Hôtel de Ville, 31000 Toulouse"
   },
   {
     "id": 14,
@@ -193,7 +206,8 @@ const etudiants = [
     "commentaire": "L'accompagnement post-diplôme m'a aidée à ouvrir mon propre cabinet.",
     "whatsapp": "https://wa.me/33611223314",
     "linkedin": "https://www.linkedin.com/in/sarah-fontaine-vet",
-    "instagram": "https://www.instagram.com/sarah_veto"
+    "instagram": "https://www.instagram.com/sarah_veto",
+    "adresse": "25 Avenue de la Marne, 56000 Vannes"
   },
   {
     "id": 15,
@@ -207,7 +221,8 @@ const etudiants = [
     "commentaire": "Les partenariats avec les grands groupes industriels sont un vrai point fort.",
     "whatsapp": "https://wa.me/33611223315",
     "linkedin": "https://www.linkedin.com/in/jules-bonnet-aero",
-    "instagram": "https://www.instagram.com/jules_fly"
+    "instagram": "https://www.instagram.com/jules_fly",
+    "adresse": "1 Place du Capitole, 31000 Toulouse"
   },
   {
     "id": 16,
@@ -221,7 +236,8 @@ const etudiants = [
     "commentaire": "Le réseau de contacts dans le monde du luxe est très puissant ici.",
     "whatsapp": "https://wa.me/33611223316",
     "linkedin": "https://www.linkedin.com/in/zoe-dupuis-luxury",
-    "instagram": "https://www.instagram.com/zoe_luxe"
+    "instagram": "https://www.instagram.com/zoe_luxe",
+    "adresse": "12 Rue du Faubourg Saint-Honoré, 75008 Paris"
   },
   {
     "id": 17,
@@ -235,7 +251,8 @@ const etudiants = [
     "commentaire": "J'apprends plus en un semestre ici qu'en deux ans ailleurs. Très axé pratique.",
     "whatsapp": "https://wa.me/33611223317",
     "linkedin": "https://www.linkedin.com/in/maxime-muller-web",
-    "instagram": "https://www.instagram.com/max_code"
+    "instagram": "https://www.instagram.com/max_code",
+    "adresse": "40 Rue de la Krutenau, 67000 Strasbourg"
   },
   {
     "id": 18,
@@ -249,7 +266,8 @@ const etudiants = [
     "commentaire": "Les visites de musées organisées chaque semaine enrichissent énormément notre formation.",
     "whatsapp": "https://wa.me/33611223318",
     "linkedin": "https://www.linkedin.com/in/eva-boyer-art",
-    "instagram": "https://www.instagram.com/eva_museum"
+    "instagram": "https://www.instagram.com/eva_museum",
+    "adresse": "7 Quai Voltaire, 75007 Paris"
   },
   {
     "id": 19,
@@ -263,7 +281,8 @@ const etudiants = [
     "commentaire": "Une école qui a une vraie vision. J'ai pu monter mon projet de start-up grâce à eux.",
     "whatsapp": "https://wa.me/33611223319",
     "linkedin": "https://www.linkedin.com/in/yanis-hubert-sport",
-    "instagram": "https://www.instagram.com/yanis_coach"
+    "instagram": "https://www.instagram.com/yanis_coach",
+    "adresse": "22 Rue Negresko, 13008 Marseille"
   },
   {
     "id": 20,
@@ -277,6 +296,7 @@ const etudiants = [
     "commentaire": "La diversité des profils sur le campus est une richesse incroyable au quotidien.",
     "whatsapp": "https://wa.me/33611223320",
     "linkedin": "https://www.linkedin.com/in/juliette-picard-world",
-    "instagram": "https://www.instagram.com/juliette_diplomacy"
+    "instagram": "https://www.instagram.com/juliette_diplomacy",
+    "adresse": "15 Rue de l'Université, 75007 Paris"
   }
 ];
